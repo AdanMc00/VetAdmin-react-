@@ -1,5 +1,7 @@
 import React, {Fragment, useState} from 'react';
+import PropTypes from 'prop-types'
 const  cryptoRandomString = require ( "crypto-random-string");
+
 const Formulario = ({createCita}) => {
 
     const [cita, setCita] = useState({
@@ -103,5 +105,9 @@ const Formulario = ({createCita}) => {
             </form>
         </Fragment>
     )
+}
+
+Formulario.propTypes = {
+    crearCita: PropTypes.func.isRequired
 }
 export default Formulario;
